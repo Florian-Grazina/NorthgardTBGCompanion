@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     #region unity methods
     protected void Awake()
     {
-        if(Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     #region public methods
     public void SetNumberOfPlayers(int numberOfPlayers)
     {
-        if(numberOfPlayers < 2 || numberOfPlayers > 6)
+        if (numberOfPlayers < 2 || numberOfPlayers > 6)
         {
             Debug.LogError("Number of players must be between 2 and 6.");
             return;
@@ -42,6 +42,12 @@ public class GameManager : MonoBehaviour
             return;
         }
         NumberOfTurns = numberOfTurns;
+    }
+
+    public void PrintData()
+    {
+        Debug.Log($"Number of Players: {NumberOfPlayers}");
+        Debug.Log($"Number of Turns: {NumberOfTurns}");
     }
     #endregion
 }
