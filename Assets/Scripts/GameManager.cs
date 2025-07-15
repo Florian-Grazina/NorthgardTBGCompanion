@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void SetNumberOfTurns(int numberOfTurns)
     {
-        if (numberOfTurns != 7 || numberOfTurns != 10)
+        if (numberOfTurns != 7 && numberOfTurns != 10)
         {
             Debug.LogError("Number of turns must be 7 or 10.");
             return;

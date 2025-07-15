@@ -17,7 +17,7 @@ public class MainMenuUI : MonoBehaviour
 
     private int GetValueFromDropdown(TMP_Dropdown dropdown)
     {
-        if(int.TryParse(dropdown.options[dropdown.value].text, out int parseValue))
+        if (int.TryParse(dropdown.options[dropdown.value].text, out int parseValue))
             return parseValue;
         return 0;
     }
